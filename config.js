@@ -41,7 +41,7 @@ const CONFIG = {
       title: "BulletTime: Time Dilation for High-Fidelity Tracing",
       authors: "Michael Wu, Sibren Isaacman, Anurag Khandelwal, Abhishek Bhattacharjee",
       venue: "ISCA 2026",
-      link: "assets/papers/ISCA_2026_BulletTime.pdf",
+      link: "",
     },
     {
       title: "Characterizing Emerging Page Replacement Policies for Memory-Intensive Applications",
