@@ -22,7 +22,7 @@ const CONFIG = {
   // You can use HTML inside these strings for links, etc.
   // ============================================================
   bio: [
-    `Hi, I am a 4th year Ph.D. student in Computer Science at
+    `Hi, I am a 5th year Ph.D. student in Computer Science at
      <a href="https://www.yale.edu/">Yale University</a>.
      I am advised by <a href="https://www.cs.yale.edu/homes/abhishek/">Prof. Abhishek Bhattacharjee</a>.
      My broad research interests are in understanding and building new algorithms
