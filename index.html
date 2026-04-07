@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Michael Wu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-photo">
+      <div class="hero-image">
+        <img src="assets/img/profile.jpg" alt="Michael Wu">
+      </div>
+    </div>
+    <h1 class="sidebar-name" id="sidebar-name"></h1>
+    <p class="sidebar-subtitle" id="sidebar-subtitle"></p>
+    <nav>
+      <a href="#">About</a>
+      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+    </nav>
+    <div class="sidebar-links" id="contact-links"></div>
+  </aside>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <div id="hero-bio"></div>
+    </section>
+
+    <hr>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="pub-list" id="pub-list"></ul>
+    </section>
+
+    <hr>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul class="edu-list" id="edu-list"></ul>
+    </section>
+
+    <hr>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul class="exp-list" id="exp-list"></ul>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script>
+    // --- Sidebar ---
+    document.getElementById("sidebar-name").textContent = CONFIG.name;
+    document.getElementById("sidebar-subtitle").textContent = CONFIG.subtitle;
+
+    const bioDiv = document.getElementById("hero-bio");
+    CONFIG.bio.forEach(text => {
+      const p = document.createElement("p");
+      p.innerHTML = text;
+      bioDiv.appendChild(p);
+    });
+
+    // --- Contact icons ---
+    const contactDiv = document.getElementById("contact-links");
+    const { email, github, linkedin, cv } = CONFIG.links;
+    if (email) contactDiv.innerHTML += `<a href="mailto:${email}" title="Email"><i class="fas fa-envelope"></i></a>`;
+    if (github) contactDiv.innerHTML += `<a href="${github}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>`;
+    if (linkedin) contactDiv.innerHTML += `<a href="${linkedin}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>`;
+    if (cv) contactDiv.innerHTML += `<a href="${cv}" target="_blank" title="CV"><i class="fas fa-file-alt"></i></a>`;
+
+    // --- Publications ---
+    const pubList = document.getElementById("pub-list");
+    CONFIG.publications.forEach(pub => {
+      const li = document.createElement("li");
+      const titleHTML = pub.link
+        ? `<a href="${pub.link}" target="_blank">${pub.title}</a>`
+        : pub.title;
+      li.innerHTML = `
+        <strong>${titleHTML}</strong><br>
+        <span class="authors">${pub.authors.replace(/Michael Wu/g, '<strong>Michael Wu</strong>')}</span><br>
+        <span class="venue">${pub.venue}</span>
+      `;
+      pubList.appendChild(li);
+    });
+
+    // --- Education ---
+    const eduList = document.getElementById("edu-list");
+    CONFIG.education.forEach(edu => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <strong>${edu.school}</strong> — ${edu.degree}
+        <span class="date">${edu.date}</span>
+        ${edu.detail ? `<br><span class="detail">${edu.detail}</span>` : ""}
+      `;
+      eduList.appendChild(li);
+    });
+
+    // --- Experience ---
+    const expList = document.getElementById("exp-list");
+    CONFIG.experience.forEach(exp => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <strong>${exp.org}</strong> — ${exp.role}
+        <span class="date">${exp.date}</span>
+        ${exp.detail ? `<br><span class="detail">${exp.detail}</span>` : ""}
+      `;
+      expList.appendChild(li);
+    });
+  </script>
+
+</body>
+</html>
