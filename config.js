@@ -63,7 +63,7 @@ const CONFIG = {
     },
     {
       title: "Hardware-Software Co-Design for Brain-Computer Interfaces",
-      authors: "Ioannis Karageorgos*, Karthik Sriram*, Ján Veselý*, Michael Wu*, Marc Powell, David Borton, Rajit Manohar, Abhishek Bhattacharjee",
+      authors: "Ioannis Karageorgos*, Karthik Sriram*, Ján Veselý*, Michael Wu, Marc Powell, David Borton, Rajit Manohar, Abhishek Bhattacharjee",
       venue: "ISCA 2020",
       link: "https://ieeexplore.ieee.org/document/9138938",
     },
