@@ -3,14 +3,14 @@ const CONFIG = {
   // PERSONAL INFO
   // ============================================================
   name: "Michael Wu",
-  subtitle: "CS PhD Student @ Yale",
+  subtitle: "CS PhD Student @ Princeton",
 
   // ============================================================
   // CONTACT / SOCIAL LINKS
   // Update these with your actual URLs. Set to "" to hide an icon.
   // ============================================================
   links: {
-    email: "mw976@yale.edu",
+    email: "michael.wu@princeton.edu",
     github: "https://github.com/aojsd",
     linkedin: "https://www.linkedin.com/in/mic-w",
     cv: "assets/cv.pdf",                    // place your CV at assets/cv.pdf
@@ -23,8 +23,8 @@ const CONFIG = {
   // ============================================================
   bio: [
     `Hi, I am a 5th year Ph.D. student in Computer Science at
-     <a href="https://www.yale.edu/">Yale University</a>.
-     I am advised by <a href="https://www.cs.yale.edu/homes/abhishek/">Prof. Abhishek Bhattacharjee</a>.
+     <a href="https://www.cs.princeton.edu/">Princeton University</a>.
+     I am advised by <a href="https://www.cs.princeton.edu/people/profile/abhattac">Prof. Abhishek Bhattacharjee</a>.
      My broad research interests are in understanding and building new algorithms
      to manage data movement for systems with memory-tiering or swapping.`,
 
