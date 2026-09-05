@@ -22,7 +22,7 @@ const CONFIG = {
   // You can use HTML inside these strings for links, etc.
   // ============================================================
   bio: [
-    `Hi, I am a 5th year Ph.D. student in Computer Science at
+    `Hi, I am a Ph.D. student in Computer Science at
      <a href="https://www.cs.princeton.edu/">Princeton University</a>.
      I am advised by <a href="https://www.cs.princeton.edu/people/profile/abhattac">Prof. Abhishek Bhattacharjee</a>.
      My broad research interests are in understanding and building new algorithms
@@ -92,6 +92,11 @@ const CONFIG = {
   // ============================================================
   experience: [
     {
+      org: "Google",
+      role: "Software Engineering Intern (PhD)",
+      date: "Summer 2026",
+      detail: "TPU Power Management and Optimization",
+    },{
       org: "Google",
       role: "Software Engineering Intern (PhD)",
       date: "Summer 2025",
